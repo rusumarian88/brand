@@ -1,0 +1,20 @@
+
+@import "mixins";
+@import "variables";
+
+:host{
+    display: block;
+    width: 100%;
+    
+}
+
+.section{
+    padding: 96px 0
+}
+
+
+@media screen and (max-width:$max-width-break-point) {
+    .section{
+        padding: 50px 0;
+    }
+}

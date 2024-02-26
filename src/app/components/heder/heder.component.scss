@@ -1,0 +1,159 @@
+
+@import "mixins";
+@import "variables";
+
+
+:host{
+    display: block;
+    width: 100%;
+}
+.content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap:68px;
+    @include latime;
+    margin-top:64px;
+    margin-bottom: 64px;
+}
+
+.left{
+    display: flex;
+    flex-direction:column ;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap:24px;
+    width: calc(50% - 65px);
+    flex-grow: 999;
+    flex-basis: 490px;
+}
+
+.title{
+    font-size: 56px;
+    line-height: 60px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    color: rgba(0, 0, 0, 1);
+}
+
+.description{
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 1);
+    margin-bottom:16px;
+}
+
+.btn-and-text{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap:20px;
+    width: 376px;
+}
+
+.text{
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1);
+}
+
+.image-heder{
+    width:calc(50% - 65px);
+    flex-grow: 1;
+    flex-basis: 490px;
+    min-height: 450px;
+    border-radius: 12px;
+    background-image: url("/assets/image-heder-desk.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.heder-cards{
+    padding: 64px 0;
+    background-color: rgba(243, 243, 243, 1);
+}
+
+.content-heder-cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    align-items: stretch;
+    gap:30px;
+    @include latime;
+}
+
+.heder-card{
+    width: calc(33.33% - (30px * 2) / 3);
+    min-width: 280px;
+}
+
+
+@media screen and (max-width:950px) {
+    .heder-card{
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width:1095px) {
+    .left{
+        align-items: center;
+    }
+    .title,.description{
+        text-align: center;
+    }
+    .btn-and-text{
+        width:100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .text{
+        text-align: center;
+    }
+    
+}
+
+@media screen and (max-width:1023px) {
+    .btn-and-text{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:$max-width-break-point) {
+    .content{
+        margin:24px 0;
+        gap:24px;
+    }
+    .title{
+        font-size: 40px;
+        line-height: 48px;
+    }
+    .description{
+        margin: 0;
+    }
+    .btn-and-text{
+        gap: 16px;
+    }
+    .text{
+        line-height: 28px;
+    }
+    .image-heder{
+        background-image:url("/assets/image-heder-mobile.png") ;
+        min-height: 310px;
+    }
+    .heder-cards{
+        padding: 24px 0;
+    }
+    .content-heder-cards{
+        gap: 48px;
+    }
+}

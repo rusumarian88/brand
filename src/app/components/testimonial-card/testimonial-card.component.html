@@ -1,0 +1,14 @@
+
+<div class="card">
+    <div class="subtitle">{{subtitle}}</div>
+    <div class="content">
+        <div class="left">
+            <div [ngStyle]="{'background-image':'url('+photo+')'}" class="photo"></div>
+            <div class="name">{{name}}</div>
+            <div class="description">{{description}}</div>
+        </div>
+        <div class="social-media">
+            <img *ngFor="let i of icons" class="icon" [src]="i">
+        </div>
+    </div>
+</div>

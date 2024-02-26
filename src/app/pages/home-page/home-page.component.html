@@ -1,0 +1,31 @@
+
+<app-heder></app-heder>
+<app-section bg="rgba(0, 0, 0, 1)" class="section-a">
+    <div class="content-section-a">
+        <div class="image-section-a"></div>
+        <div class="right">
+            <div class="title-sec-a">Long headline on two lines to turn your visitors into users and achieve more</div> 
+            <div class="description-sec-a">Separated they live in Bookmarks right at the coast of the famous Semantics, large language ocean</div>
+            <div class="list">
+                <li>Showcase and embed your work with</li>
+                <li>Publish across social channels in a click</li>
+                <li>Sell your videos worldwide</li>
+                <li>Embed your work with </li>
+            </div>
+        </div>
+    </div>
+</app-section>
+<app-section class="section-b">
+    <div class="testimonial-cards">
+        <app-testimonial-card *ngFor="let c of testimonialService.testimonials" [subtitle]="c.subtitle" [photo]="c.photo" [name]="c.name" [description]="c.description" [icons]="c.icons" class="testimonial-card"></app-testimonial-card>
+    </div>
+    <img class="indicator" src="/assets/indicator.png">
+</app-section>
+<app-section class="section-c">
+    <div class="content-sec-c">
+        <div class="subtitle-sec-c">Tagline</div>
+        <div class="title-sec-c">Long headline to turn your visitors into users</div>
+        <app-button [secondary]="true" button="Action" class="btn-sec-c"></app-button>
+    </div>
+</app-section>
+<app-footer></app-footer>

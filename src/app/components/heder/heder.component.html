@@ -1,0 +1,19 @@
+<div class="heder">
+    <app-nav-bar></app-nav-bar>
+    <div class="content">
+        <div class="left">
+            <div class="title">Medium length display headline</div>
+            <div class="description">Separated they live in Bookmarks right at the coast of the famous Semantics, large language </div>
+            <div class="btn-and-text">
+                <app-button class="btn" button="Action"></app-button>
+                <div class="text">5,000 people like you have purchased this product!</div>
+            </div>
+        </div>
+        <div class="image-heder"></div>
+    </div>
+    <div class="heder-cards">
+        <div class="content-heder-cards">
+            <app-heder-card *ngFor="let c of hederCardsservice.hederCards" [circle]="c.circle" [title]="c.title" [description]="c.description" class="heder-card"></app-heder-card>
+        </div>
+    </div>
+</div>

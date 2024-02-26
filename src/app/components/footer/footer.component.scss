@@ -1,0 +1,134 @@
+
+@import "mixins";
+@import "variables";
+
+:host{
+    display: block;
+    width:100%;
+}
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items: flex-start;
+    gap: 48px;
+    @include latime;
+}
+
+.logo{
+   width: 160px;
+}
+
+.logo img{
+    height: 27px;
+}
+
+.content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items: flex-start;
+    gap:48px;
+    flex-grow: 1;
+}
+
+.right{
+    width:300px
+}
+
+.left{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap:24px;
+    flex-grow: 1;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items:flex-start;
+    gap: 8px;
+    flex-grow: 1;
+    min-width: 160px;
+
+}
+
+.title{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    letter-spacing: 0.1px;
+    color: rgba(255, 255, 255, 1);
+    margin-bottom:8px;
+}
+
+
+.column-item{
+    display: inline-block;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+    &:hover{
+        color: gray;
+        border-bottom: 1px solid #d3d3d3;
+    }
+}
+
+.input{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    border-radius: 40px;
+    background-color: rgba(38, 38, 38, 1);
+    margin-bottom: 20px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.inp{
+    border: none;
+    outline: none;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    letter-spacing: 0.1px;
+    color: rgba(255, 255, 255, 1);
+    background: transparent;
+    width:100%;
+}
+
+.icon-input{
+    width: 24px;
+    margin-left: 12px;
+}
+
+.text{
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+@media screen and (max-width:$max-width-break-point) {
+    .right,.logo{
+        margin: auto;
+        text-align: center;
+    }
+    .column{
+        align-items: center;
+    }
+}

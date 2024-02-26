@@ -1,0 +1,60 @@
+
+@import "mixins";
+@import "variables";
+
+:host{
+    display: inline-block;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretchf;
+    gap: 16px;
+    width: 100%;
+}
+
+.title-card{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+}
+
+.circle{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 1);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.title{
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 1);
+}
+
+.description{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    letter-spacing: 0.1px;
+    color: rgba(0, 0, 0, 1);
+}
+
+@media screen and (max-width:950px) {
+    .card{
+        align-items: center;
+    }
+    .description{
+        text-align: center;
+    }
+}

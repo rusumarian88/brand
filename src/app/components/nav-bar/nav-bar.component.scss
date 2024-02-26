@@ -1,0 +1,99 @@
+
+@import "mixins";
+@import "variables";
+
+:host{
+    display: block;
+    width: 100%;
+}
+
+.bar{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px 24px;
+    height: 96px;
+}
+
+.logo{
+    height: 27px;
+}
+
+.menu-item{
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 1);
+    letter-spacing: 0.1px;
+    margin:0 20px;
+    cursor: pointer;
+    &:hover{
+        color: #d3d3d3;
+        border-bottom:2px solid gray;
+    }
+}
+
+.menu-item .content{
+    position: absolute;
+    top:100%;
+    left: 0;
+    // right: 0;
+    width: 200px;
+    background-color: red;
+    display: none;
+    padding: 12px;
+}
+
+.menu-item:hover .content{
+    display: block;
+}
+
+
+.icon{
+    font-size: 22px;
+    vertical-align: middle;
+}
+
+.menu-btn{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-image: url("/assets/menu-btn.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width:840px) {
+    .menu-item{
+        font-size: 12px;
+        margin: 0 12px;
+    }
+    .icon{
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width:$max-width-break-point) {
+    .bar{
+        padding:24px;
+        height:74px;
+    }
+    .logo{
+        height: 19px;
+    }
+    .menu,.btn{
+        display:none;
+    }
+
+}
+
+@media screen and (min-width:$max-width-break-point) {
+    .menu-btn{
+        display: none;
+    }
+}

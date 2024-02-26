@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "site":"brandd",
+    "public": "dist/brand",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
